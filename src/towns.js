@@ -48,12 +48,12 @@ function loadTowns() {
 
 		cities.sort((city1, city2) => {
 			if (city1.name > city2.name) {
-				return 1
+				return 1;
 			} else if (city1.name < city2.name) {
-				return -1
+				return -1;
+			} else {
+				return 0;
 			}
-
-			return 0
 		});
 
 		resolve(cities);
@@ -101,7 +101,7 @@ filterInput.addEventListener('keyup', function() {
 	let filterValue = filterInput.value;
 
 	if (!filterValue) {
-	    return
+	    return;
     }
 
     let filteredCities = cityGlobal.filter(city => {

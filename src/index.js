@@ -39,19 +39,17 @@ function loadAndSortTowns() {
         let xhrResponse = xhr.responseText;
         let cities = JSON.parse(xhrResponse);
 
-
         cities.sort((city1, city2) => {
 			if (city1.name > city2.name) {
-				return 1
+				return 1;
 			} else if (city1.name < city2.name) {
-				return -1
-			}
-
-			return 0
+				return -1;
+			} else {
+				return 0;
+            }
 		});
 
         resolve(cities);
-
     })
 }
 
