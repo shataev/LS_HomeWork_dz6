@@ -28,7 +28,7 @@ module.exports = function(config) {
             }
         },
         captureTimeout: 20000,
-        singleRun: false,
+        singleRun: true,
         plugins: [
             require('karma-mocha'),
             require('karma-chai'),
